@@ -11,7 +11,8 @@ const corsOptions = {
   origin: [
     "https://mailmerge.online",
     "https://www.mailmerge.online",
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "https://pranjalimailmerge.netlify.app"
   ],
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]

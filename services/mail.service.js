@@ -60,12 +60,12 @@ export const sendBulkMail = async (req, res) => {
     // Start sending emails asynchronously
     for (const user of validUsers) {
       try {
-        // Replace ALL <variables> dynamically
-        const finalHtml = html.replace(/<(\w+)>/g, (_, key) =>
+        // Replace ALL {{variables}} dynamically
+        const finalHtml = html.replace(/\{\{(\w+)\}\}/g, (_, key) =>
           user[key] !== undefined ? user[key] : ""
         );
 
-        const finalSubject = subject.replace(/<(\w+)>/g, (_, key) =>
+        const finalSubject = subject.replace(/\{\{(\w+)\}\}/g, (_, key) =>
           user[key] !== undefined ? user[key] : ""
         );
 

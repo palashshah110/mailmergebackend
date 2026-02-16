@@ -70,7 +70,7 @@ export const sendBulkMail = async (req, res) => {
         );
 
         await transporter.sendMail({
-          from: `"Mail Merge" <${process.env.EMAIL}>`,
+          from: `"Learning Links India" <${process.env.EMAIL}>`,
           to: user.email,
           subject: finalSubject,
           html: finalHtml,
